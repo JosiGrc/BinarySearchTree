@@ -30,18 +30,18 @@ namespace BinarySearchTree
                 start = nodeToAdd;
                 return;
             }
-
             Node node = start;
-            //check if theres a node there, if nor make one          
+
+            //check if theres a node there, if nor make one       
 
             while (true)
             {
                 if (data > node.data)
                 {
-                    if (node == null)
+                    if (node.rightChild == null)
                     {
-                        nodeToAdd = new Node(data);
-                        node.rightChild = new Node(data);
+                        node.rightChild = nodeToAdd;
+                        break;
                     }
                     else
                     {
@@ -50,23 +50,23 @@ namespace BinarySearchTree
                 }
                 else if (data <= node.data)
                 {
-                    if (node == null)
+                    if (node.leftChild == null)
                     {
-                        nodeToAdd = new Node(data);
-                        node.leftChild = new Node(data);
+                        node.leftChild = nodeToAdd;
+                        break;
                     }
                     else
                     {
                         node = node.leftChild;
                     }
-
                 }
-            }
+            }            
         }
-
-        //public int SearchNode()
-        //{
-
-        //}
+        /// ////////////////////////////////////
+        /// //SearchMethod
+        public int SearchNode() //When the search function is called the int will be brought along with the its parent and child nodes
+        {
+            
+        }
     }
 }

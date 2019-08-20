@@ -63,7 +63,7 @@ namespace BinarySearchTree
             }            
         }
         /// ////////////////////////////////////
-        /// //SearchMethod
+        /////SearchMethod
         public int SearchNode() //When the search function is called the int will be brought along with the its parent and child nodes
         {
             
